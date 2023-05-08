@@ -143,7 +143,8 @@ def interactive(args):
 
             terminated = log_step(env, np.array(action), args)
             if args.render:
-                env.render(mode='human')
+                env.render()
+                # env.render(mode='human')
             if args.metrics and terminated:
                 break
 
